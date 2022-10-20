@@ -1,0 +1,64 @@
+body {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("./bg.jpeg");
+    position: relative;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+main {
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 0 15px #ffffff;
+    /*background-color: #ffffff;*/
+    color: #ffffff;
+    border-radius: 0.5rem;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+}
+
+/* Highlight from https://alvarotrigo.com/blog/css-highlight-text/*/
+
+strong {
+    position: relative;
+}
+
+strong::before {
+    /* Highlight color */
+    background-color: #e0b503;
+
+    content: "";
+    position: absolute;
+    width: calc(100% + 4px);
+    height: 60%;
+    left: -2px;
+    bottom: 10px;
+    z-index: -1;
+    transform: rotate(-2deg);
+}
+
+p > strong::before {
+    background-color: #46b96c;
+    bottom: 0;
+}
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 1px;
+    font-size: 3rem;
+}
+
+main p {
+    font-size: 1.5rem;
+}
+
+.wrong {
+    text-decoration: line-through;
+    font-size: 1rem;
+}
+
